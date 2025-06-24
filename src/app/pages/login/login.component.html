@@ -1,1 +1,54 @@
-<p>login works!</p>
+<div class="auth-container">
+  <div class="auth-toggle">
+    <button class="toggle-btn" [class.active]="!isSignUp" (click)="setAuthMode(false)">Login</button>
+    <button class="toggle-btn" [class.active]="isSignUp" (click)="setAuthMode(true)">Sign Up</button>
+  </div>
+
+  <div class="auth-form" *ngIf="isSignUp">
+    <h2>Create Account</h2>
+    <form>
+      <div class="input-group">
+        <span class="icon"><i class="fa fa-user"></i></span>
+        <input type="text" placeholder="Full Name" />
+      </div>
+      <div class="input-group">
+        <span class="icon"><i class="fa fa-envelope"></i></span>
+        <input type="email" placeholder="Email" />
+      </div>
+      <div class="input-group">
+        <span class="icon"><i class="fa fa-lock"></i></span>
+        <input type="password" placeholder="Password" />
+        <span class="icon eye"><i class="fa fa-eye"></i></span>
+      </div>
+      <div class="input-group">
+        <span class="icon"><i class="fa fa-lock"></i></span>
+        <input type="password" placeholder="Confirm Password" />
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" />
+        <label for="terms">
+          I agree to the
+          <a href="#">Terms of Service</a> and
+          <a href="#">Privacy Policy</a>
+        </label>
+      </div>
+      <button class="signup-btn">Sign Up</button>
+    </form>
+  </div>
+
+  <div class="auth-form" *ngIf="!isSignUp">
+    <h2>Login</h2>
+    <form>
+      <div class="input-group">
+        <span class="icon"><i class="fa fa-envelope"></i></span>
+        <input type="email" placeholder="Email" />
+      </div>
+      <div class="input-group">
+        <span class="icon"><i class="fa fa-lock"></i></span>
+        <input type="password" placeholder="Password" />
+        <span class="icon eye"><i class="fa fa-eye"></i></span>
+      </div>
+      <button class="signup-btn">Login</button>
+    </form>
+  </div>
+</div>
