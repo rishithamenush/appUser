@@ -17,11 +17,19 @@ export class LoginComponent {
   isSignUp = true;
   animationClass = 'signupAnimation';
   registerObj: UserRegister = new UserRegister();
+  userService: inject(UserService);
 
   setAuthMode(signUp: boolean) {
     if (signUp !== this.isSignUp) {
       this.animationClass = signUp ? 'signupAnimation' : 'loginAnimation';
       this.isSignUp = signUp;
     }
+  }
+  onRegister() {
+    this.userService.registerUser(this.registerObj).subscribe((res: UserRegister) => {
+      alert("User registered successfully!")
+    }, (err) => {
+      alert(err);
+    })
   }
 }
