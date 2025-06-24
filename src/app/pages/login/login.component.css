@@ -104,3 +104,23 @@
 .signup-btn:hover {
   background: linear-gradient(90deg, #8d5cf6 0%, #6a5af9 100%);
 }
+
+.auth-form {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loginAnimation {
+  transform: translateX(-40px);
+  opacity: 0.7;
+}
+
+.signupAnimation {
+  transform: translateX(40px);
+  opacity: 0.7;
+}
+
+.auth-form.signupAnimation,
+.auth-form.loginAnimation {
+  opacity: 1;
+  transform: translateX(0);
+}

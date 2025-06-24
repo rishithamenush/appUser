@@ -4,7 +4,7 @@
     <button class="toggle-btn" [class.active]="isSignUp" (click)="setAuthMode(true)">Sign Up</button>
   </div>
 
-  <div class="auth-form" *ngIf="isSignUp">
+  <div class="auth-form" *ngIf="isSignUp" [ngClass]="animationClass">
     <h2>Create Account</h2>
     <form>
       <div class="input-group">
@@ -36,7 +36,7 @@
     </form>
   </div>
 
-  <div class="auth-form" *ngIf="!isSignUp">
+  <div class="auth-form" *ngIf="!isSignUp" [ngClass]="animationClass">
     <h2>Login</h2>
     <form>
       <div class="input-group">
