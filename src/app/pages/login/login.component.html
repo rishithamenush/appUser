@@ -48,14 +48,14 @@
     <form>
       <div class="input-group">
         <span class="icon"><i class="fa fa-envelope"></i></span>
-        <input type="email" name="loginEmail" placeholder="Email" required />
+        <input type="email" name="email" [(ngModel)]="loginObj.email"  placeholder="Email" required />
       </div>
       <div class="input-group">
         <span class="icon"><i class="fa fa-lock"></i></span>
-        <input type="password" name="loginPassword" placeholder="Password" required />
+        <input type="password" name="password" [(ngModel)]="loginObj.password" placeholder="Password" required />
         <span class="icon eye"><i class="fa fa-eye"></i></span>
       </div>
-      <button class="signup-btn">Login</button>
+      <button (click)="onLogin()" class="signup-btn">Login</button>
     </form>
   </div>
 </div>

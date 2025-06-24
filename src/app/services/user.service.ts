@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {UserRegister} from '../model/user.model';
+import {LoginModel, UserRegister} from '../model/user.model';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -12,5 +12,9 @@ export class UserService {
 
   registerUser(obj: UserRegister) : Observable<UserRegister>{
     return this.http.post<UserRegister>("https://api.freeprojectapi.com/api/UserApp/CreateNewUser", obj)
+  }
+
+  onLogin(obj: LoginModel) : Observable<UserRegister>{
+    return this.http.post<UserRegister>("https://api.freeprojectapi.com/api/UserApp/login", obj)
   }
 }
