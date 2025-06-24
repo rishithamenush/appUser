@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgIf, NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UserRegister } from '../../model/user.model';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent {
   isSignUp = true;
   animationClass = 'signupAnimation';
   registerObj: UserRegister = new UserRegister();
-  userService: inject(UserService);
+  private userService = inject(UserService);
 
   setAuthMode(signUp: boolean) {
     if (signUp !== this.isSignUp) {
