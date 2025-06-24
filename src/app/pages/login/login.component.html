@@ -9,20 +9,18 @@
     <form>
       <div class="input-group">
         <span class="icon"><i class="fa fa-user"></i></span>
-        <input type="text" placeholder="Full Name" />
+        <input type="text" name="fullName" [(ngModel)]="registerObj.fullName" placeholder="Full Name" />
       </div>
+
       <div class="input-group">
         <span class="icon"><i class="fa fa-envelope"></i></span>
-        <input type="email" placeholder="Email" />
+        <input type="email" name="email" [(ngModel)]="registerObj.email"  placeholder="Email" />
       </div>
+
       <div class="input-group">
         <span class="icon"><i class="fa fa-lock"></i></span>
-        <input type="password" placeholder="Password" />
+        <input type="password" name="password" [(ngModel)]="registerObj.password"  placeholder="Password" />
         <span class="icon eye"><i class="fa fa-eye"></i></span>
-      </div>
-      <div class="input-group">
-        <span class="icon"><i class="fa fa-lock"></i></span>
-        <input type="password" placeholder="Confirm Password" />
       </div>
       <div class="checkbox-group">
         <input type="checkbox" id="terms" />
