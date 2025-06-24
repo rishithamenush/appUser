@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {NgIf, NgClass} from '@angular/common';
-import {UserRegister} from '../../model/user.model';
-import {FormsModule, NgModel} from '@angular/forms';
+import { NgIf, NgClass } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { UserRegister } from '../../model/user.model';
 
 @Component({
   selector: 'app-login',

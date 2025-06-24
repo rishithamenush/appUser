@@ -9,18 +9,27 @@
     <form>
       <div class="input-group">
         <span class="icon"><i class="fa fa-user"></i></span>
-        <input type="text" name="fullName" [(ngModel)]="registerObj.fullName" placeholder="Full Name" />
+        <input type="text" name="fullName" #name="ngModel" [(ngModel)]="registerObj.fullName" placeholder="Full Name" required />
+        <div class="danger-message">
+          <span *ngIf="name.errors?.['required'] && name.touched">This is Required</span>
+        </div>
       </div>
 
       <div class="input-group">
         <span class="icon"><i class="fa fa-envelope"></i></span>
-        <input type="email" name="email" [(ngModel)]="registerObj.email"  placeholder="Email" />
+        <input type="email" name="email" #email="ngModel" [(ngModel)]="registerObj.email" placeholder="Email" required />
+        <div class="danger-message">
+          <span *ngIf="email.errors?.['required'] && email.touched">This is Required</span>
+        </div>
       </div>
 
       <div class="input-group">
         <span class="icon"><i class="fa fa-lock"></i></span>
-        <input type="password" name="password" [(ngModel)]="registerObj.password"  placeholder="Password" />
+        <input type="password" name="password" #pwd="ngModel" [(ngModel)]="registerObj.password" placeholder="Password" required />
         <span class="icon eye"><i class="fa fa-eye"></i></span>
+        <div class="danger-message">
+          <span *ngIf="pwd.errors?.['required'] && pwd.touched">This is Required</span>
+        </div>
       </div>
       <div class="checkbox-group">
         <input type="checkbox" id="terms" />
@@ -39,11 +48,11 @@
     <form>
       <div class="input-group">
         <span class="icon"><i class="fa fa-envelope"></i></span>
-        <input type="email" placeholder="Email" />
+        <input type="email" name="loginEmail" placeholder="Email" required />
       </div>
       <div class="input-group">
         <span class="icon"><i class="fa fa-lock"></i></span>
-        <input type="password" placeholder="Password" />
+        <input type="password" name="loginPassword" placeholder="Password" required />
         <span class="icon eye"><i class="fa fa-eye"></i></span>
       </div>
       <button class="signup-btn">Login</button>
