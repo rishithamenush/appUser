@@ -17,7 +17,7 @@
 
       <div class="input-group">
         <span class="icon"><i class="fa fa-envelope"></i></span>
-        <input type="email" name="email" #email="ngModel" [(ngModel)]="registerObj.email" placeholder="Email" required />
+        <input type="email" name="email" #email="ngModel" [(ngModel)]="registerObj.emailId" placeholder="Email" required />
         <div class="danger-message">
           <span *ngIf="email.errors?.['required'] && email.touched">This is Required</span>
         </div>
@@ -48,7 +48,7 @@
     <form>
       <div class="input-group">
         <span class="icon"><i class="fa fa-envelope"></i></span>
-        <input type="email" name="email" [(ngModel)]="loginObj.email"  placeholder="Email" required />
+        <input type="email" name="email" [(ngModel)]="loginObj.emailId"  placeholder="Email" required />
       </div>
       <div class="input-group">
         <span class="icon"><i class="fa fa-lock"></i></span>

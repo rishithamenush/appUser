@@ -1,13 +1,13 @@
 export class UserRegister{
   userId: number;
-  email: string;
+  emailId: string;
   fullName: string;
   password: string;
   confirmPassword: string;
 
   constructor() {
     this.userId = 0;
-    this.email = '';
+    this.emailId = '';
     this.fullName = '';
     this.password = '';
     this.confirmPassword = '';
@@ -16,11 +16,11 @@ export class UserRegister{
 
 
 export class LoginModel{
-  email: string;
+  emailId: string;
   password: string;
 
   constructor() {
-    this.email = '';
+    this.emailId = '';
     this.password = '';
   }
 }

@@ -31,18 +31,20 @@ export class LoginComponent {
   }
   onRegister() {
     this.userService.registerUser(this.registerObj).subscribe((res: UserRegister) => {
-      alert("User registered successfully!");
-      this.router.navigateByUrl('/dashboard');
+      alert("User registered successfully! Please log in.");
+      this.setAuthMode(false);
+      this.registerObj = new UserRegister(); // Optionally clear the registration form
     }, (err) => {
-      alert(err);
+      alert(err.error?.title || err.message || 'Registration failed');
     })
   }
 
   onLogin() {
-    this.userService.registerUser(this.registerObj).subscribe((res: UserRegister) => {
-      alert("User Found, Login successfully!")
+    this.userService.onLogin(this.loginObj).subscribe((res: UserRegister) => {
+      alert("Login successful!");
+      this.router.navigateByUrl('/dashboard');
     }, (err) => {
-      alert(err);
+      alert(err.error?.title || err.message || 'Login failed');
     })
   }
 }
