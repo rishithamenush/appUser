@@ -1,19 +1,59 @@
-<nav class="navbar">
-  <div class="navbar-brand">
-    <i class="fa fa-user-circle"></i>
-    <span class="brand-title">User</span>
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <!-- Replace with your logo or use text as placeholder -->
+<!--    <img src="assets/logo.png" alt="Logo" class="logo-img" />-->
+    <span class="logo-title">SIMLEA<sup>®</sup></span>
   </div>
-  <ul class="navbar-links">
-    <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
-    <li><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
-    <li><a routerLink="/settings" routerLinkActive="active">Settings</a></li>
-  </ul>
-  <div class="navbar-actions">
+  <nav class="sidebar-nav">
+    <a routerLink="/dashboard" routerLinkActive="active">
+      <i class="fa fa-home"></i>
+      <span>Dashboard</span>
+    </a>
+    <a routerLink="/account" routerLinkActive="active">
+      <i class="fa fa-user"></i>
+      <span>Account</span>
+    </a>
+    <a routerLink="/company-data" routerLinkActive="active">
+      <i class="fa fa-briefcase"></i>
+      <span>Company Data</span>
+    </a>
+    <a routerLink="/employee" routerLinkActive="active">
+      <i class="fa fa-users"></i>
+      <span>Employee</span>
+    </a>
+    <a routerLink="/events" routerLinkActive="active">
+      <i class="fa fa-calendar"></i>
+      <span>Events</span>
+    </a>
+    <a routerLink="/forms" routerLinkActive="active">
+      <i class="fa fa-edit"></i>
+      <span>Forms</span>
+    </a>
+    <a routerLink="/leads" routerLinkActive="active">
+      <i class="fa fa-list"></i>
+      <span>Leads</span>
+    </a>
+    <a routerLink="/email-manager" routerLinkActive="active">
+      <i class="fa fa-envelope"></i>
+      <span>Email Manager</span>
+    </a>
+    <a routerLink="/api-order" routerLinkActive="active">
+      <i class="fa fa-cog"></i>
+      <span>Api Order</span>
+    </a>
+  </nav>
+  <div class="sidebar-bottom">
+    <hr class="sidebar-divider" />
     <button class="logout-btn" (click)="logout()">
-      <i class="fa fa-sign-out"></i> Logout
+      <i class="fa fa-sign-out"></i>
+      <span>Logout</span>
     </button>
+    <div class="app-store">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="google-play-badge" />
+    </div>
   </div>
-</nav>
+</aside>
 <main class="main-content">
   <router-outlet></router-outlet>
 </main>

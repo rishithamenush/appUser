@@ -79,3 +79,149 @@
   background: #fafaff;
   min-height: calc(100vh - 64px);
 }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:host {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  box-shadow: 2px 0 12px rgba(80, 80, 180, 0.06);
+  padding: 0 0 24px 0;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  padding: 32px 0 24px 0;
+  flex-direction: column;
+}
+
+.logo-img {
+  width: 60px;
+  margin-bottom: 8px;
+}
+
+.logo-title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 0 0 0;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  color: #444;
+  text-decoration: none;
+  font-size: 1.08rem;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover {
+  background: #3fd0fc;
+  color: #fff;
+}
+
+.sidebar-nav a.active i,
+.sidebar-nav a.active span,
+.sidebar-nav a:hover i,
+.sidebar-nav a:hover span {
+  color: #19c2f7;
+}
+
+.sidebar-nav i {
+  font-size: 1.3rem;
+}
+
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+
+.logout-btn:hover {
+  color: #3fd0fc;
+}
+
+.app-store img {
+  width: 140px;
+  margin-top: 8px;
+  display: block;
+}
+
+.main-content {
+  flex: 1;
+  background: #fafaff;
+  padding: 32px;
+  min-height: 100vh;
+}
+
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 24px 0 12px 0;
+  width: 80%;
+  align-self: center;
+}
+
+.google-play-badge {
+  margin-top: 8px;
+}
+
+.dashboard-tile:hover i,
+.dashboard-tile:hover span {
+  color: #19c2f7;
+}
+
+.dashboard-tile span {
+  color: #222;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.user-email {
+  color: #19c2f7;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
