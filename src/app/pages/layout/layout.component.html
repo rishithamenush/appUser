@@ -1,1 +1,19 @@
-<p>layout works!</p>
+<nav class="navbar">
+  <div class="navbar-brand">
+    <i class="fa fa-user-circle"></i>
+    <span class="brand-title">User</span>
+  </div>
+  <ul class="navbar-links">
+    <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+    <li><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
+    <li><a routerLink="/settings" routerLinkActive="active">Settings</a></li>
+  </ul>
+  <div class="navbar-actions">
+    <button class="logout-btn" (click)="logout()">
+      <i class="fa fa-sign-out"></i> Logout
+    </button>
+  </div>
+</nav>
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>

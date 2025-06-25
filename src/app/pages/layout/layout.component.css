@@ -1,0 +1,81 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #6a5af9 0%, #8d5cf6 100%);
+  padding: 0 32px;
+  height: 64px;
+  box-shadow: 0 2px 8px rgba(80, 80, 180, 0.08);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.navbar-brand .fa-user-circle {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.brand-title {
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 18px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  background: #fff;
+  color: #6a5af9;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  background: #fff;
+  color: #6a5af9;
+  border: none;
+  border-radius: 18px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.logout-btn:hover {
+  background: #f3f4f6;
+  color: #8d5cf6;
+}
+
+.main-content {
+  padding: 32px;
+  background: #fafaff;
+  min-height: calc(100vh - 64px);
+}

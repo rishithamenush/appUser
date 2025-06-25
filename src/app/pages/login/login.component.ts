@@ -42,6 +42,7 @@ export class LoginComponent {
   onLogin() {
     this.userService.onLogin(this.loginObj).subscribe((res: UserRegister) => {
       alert("Login successful!");
+      localStorage.setItem('logData',JSON.stringify(res))
       this.router.navigateByUrl('/dashboard');
     }, (err) => {
       alert(err.error?.title || err.message || 'Login failed');
