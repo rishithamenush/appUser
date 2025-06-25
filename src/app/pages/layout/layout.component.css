@@ -92,14 +92,15 @@ body, html {
 }
 
 .sidebar {
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  bottom: 0;
   width: 260px;
+  z-index: 9999 !important;
   background: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-  box-shadow: 2px 0 12px rgba(80, 80, 180, 0.06);
-  padding: 0 0 24px 0;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .sidebar-logo {
@@ -189,7 +190,11 @@ body, html {
 }
 
 .main-content {
-  flex: 1;
+  margin-left: 260px !important;
+  width: calc(100% - 260px);
+  position: relative;
+  z-index: 1;
+  min-width: 0;
   background: #fafaff;
   padding: 32px;
   min-height: 100vh;
@@ -224,4 +229,25 @@ body, html {
   font-size: 1.2rem;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.sidebar-link {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  color: #444;
+  font-size: 1.08rem;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.sidebar-link.active,
+.sidebar-link:hover {
+  background: #3fd0fc;
+  color: #fff;
 }
